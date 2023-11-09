@@ -1,4 +1,97 @@
 {% extends 'base.html' %}
 {% block content %}
 
+<div class="container">
+
+    <!-- Movies card -->
+    <div id="aloi-tech-card" class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+        <div class="col-md-4">
+            <img src="https://i.pinimg.com/564x/c3/ef/1c/c3ef1cd6b1131a06ec7b7bed2aa5a9ad.jpg" class="img-fluid rounded-start" alt="Movies_Image">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+            <h5 class="card-title">Movies</h5>
+            <p class="card-text">Brace yourself for an adrenaline-pumping ride! Experience a journey of emotions and transformation. 
+                <a href="">Series</a>
+                <a href="">Sci-Fi</a>
+                <a href="">Drama</a>
+                <a href="">Action</a>
+                <a href="">Experimental</a>
+                <a href="">Romance</a>
+                <a href="">War</a>
+                <a href="">Horror</a>
+            </p>
+            <p class="card-text">Last updated {{ my_object.last_updated|timesince }} ago</p>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Music Card -->
+    <div id="aloi-tech-card" class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+        <div class="col-md-4">
+            <img src="https://i.pinimg.com/564x/36/6f/86/366f863fd2f0f1c848965c80e03b964b.jpg" class="img-fluid rounded-start" alt="Movies_Image">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+            <h5 class="card-title">Music</h5>
+            <p class="card-text">A place for all your favourite Songs. 
+                <a href="">Pop</a>
+                <a href="">R&B</a>
+                <a href="">Rock</a>
+                <a href="">Gospel</a>
+                <a href="">Hip Hop/Rap</a>
+                <a href="">Electronic</a>
+                <a href="">Country</a>
+                <a href="">Jazz</a>
+                <a href="">Reggae</a>
+                
+            </p>
+            <p class="card-text">Last updated {{ my_object.last_updated|timesince }} ago</p>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Sports Card -->
+    <div id="aloi-tech-card" class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+        <div class="col-md-4">
+            <img src="https://i.pinimg.com/564x/61/cb/11/61cb116eef9112497c957112a00f67c7.jpg" class="img-fluid rounded-start" alt="Movies_Image">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+            <h5 class="card-title">Sports</h5>
+            <p class="card-text">Embrace the thrill of victory, the agony of defeat, and the glory of sport. Experience the highs and lows like never before! 
+                <a href="">Football</a>
+                <a href="">Basketball</a>
+                <a href="">Baseball</a>
+                <a href="">Cricket</a>
+                <a href="">Olympics</a>
+            </p>
+            <p class="card-text">Last updated {{ my_object.last_updated|timesince }} ago</p>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- News Card -->
+    <div id="aloi-tech-card" class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+        <div class="col-md-4">
+            <img src="https://i.pinimg.com/564x/8b/5b/21/8b5b214583ec8002fc3f85d2e1278464.jpg" class="img-fluid rounded-start" alt="Movies_Image">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+            <h5 class="card-title">News Updates</h5>
+            <p class="card-text">Stay informed, stay ahead! Get the latest, most accurate news from around the world with our news service. Our dedicated team of journalists works round the clock to bring you in-depth coverage on a wide range of topics - politics, business, sports, entertainment, and more. Our news is more than just facts; we provide context, insights, and expert analysis to help you understand the bigger picture. Don't miss out on important updates - subscribe to our news service today 
+            </p>
+            <p class="card-text">Last updated {{ my_object.last_updated|timesince }} ago</p>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
