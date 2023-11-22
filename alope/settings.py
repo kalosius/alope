@@ -30,6 +30,8 @@ INSTALLED_APPS = [
     'movies',
     'music',
     'sports',
+    'news',
+    'weather',
 
 ]
 
