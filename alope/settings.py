@@ -12,9 +12,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'django-insecure-uv++#no(@%ye@i_l_7e!n93y!3ntzv1dz+zkawk=@z2+1c39^t'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'sports',
     'news',
     'weather',
+    'rest_framework',
 
 ]
 
