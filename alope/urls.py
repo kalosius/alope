@@ -9,4 +9,5 @@ urlpatterns = [
     path('music/', include('music.urls')),
     path('sports/', include('sports.urls')),
     path('news/', include('news.urls')),
+    path('weather/', include('weather.urls')),
 ]
