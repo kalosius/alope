@@ -27,5 +27,4 @@ class SongApiView(APIView):
 
 
 def songs(request):
-
     return render(request, 'products/music.html')
