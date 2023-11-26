@@ -27,3 +27,27 @@ class MovieApiView(APIView):
 
 def home_movie(request):
     return render(request, 'products/home_movie.html')
+
+def action(request):
+    return render(request, "products/movie_category/action.html")
+
+def drama(request):
+    return render(request, "products/movie_category/drama.html")
+
+def experimental(request):
+    return render(request, "products/movie_category/experimental.html")
+
+def horror(request):
+    return render(request, "products/movie_category/horror.html")
+
+def romance(request):
+    return render(request, "products/movie_category/romance.html")
+
+def scifi(request):
+    return render(request, "products/movie_category/sci_fi.html")
+
+def series(request):
+    return render(request, "products/movie_category/series.html")
+
+def war(request):
+    return render(request, "products/movie_category/war.html")

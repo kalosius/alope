@@ -13,14 +13,14 @@
             <div class="card-body">
             <h5 class="card-title">Movies</h5>
             <p class="card-text">Brace yourself for an adrenaline-pumping ride! Experience a journey of emotions and transformation. 
-                <a href="">Series</a>
-                <a href="">Sci-Fi</a>
-                <a href="">Drama</a>
-                <a href="">Action</a>
-                <a href="">Experimental</a>
-                <a href="">Romance</a>
-                <a href="">War</a>
-                <a href="">Horror</a>
+                <a href="{% url 'series' %}">Series</a>
+                <a href="{% url 'scifi' %}">Sci-Fi</a>
+                <a href="{% url 'drama' %}">Drama</a>
+                <a href="{% url 'action' %}">Action</a>
+                <a href="{% url 'experimental' %}">Experimental</a>
+                <a href="{% url 'romance' %}">Romance</a>
+                <a href="{% url 'war' %}">War</a>
+                <a href="{% url 'horror' %}">Horror</a>
             </p>
             <p class="card-text">Last updated {{ my_object.last_updated|timesince }} ago</p>
             </div>
@@ -38,15 +38,15 @@
             <div class="card-body">
             <h5 class="card-title">Music</h5>
             <p class="card-text">A place for all your favourite Songs. 
-                <a href="">Pop</a>
-                <a href="">R&B</a>
-                <a href="">Rock</a>
-                <a href="">Gospel</a>
-                <a href="">Hip Hop/Rap</a>
-                <a href="">Electronic</a>
-                <a href="">Country</a>
-                <a href="">Jazz</a>
-                <a href="">Reggae</a>
+                <a href="{% url 'pop' %}">Pop</a>
+                <a href="{% url 'rnb' %}">R&B</a>
+                <a href="{% url 'rock' %}">Rock</a>
+                <a href="{% url 'gospel' %}">Gospel</a>
+                <a href="{% url 'hiphop' %}">Hip Hop/Rap</a>
+                <a href="{% url 'electronic' %}">Electronic</a>
+                <a href="{% url 'country' %}">Country</a>
+                <a href="{% url 'jazz' %}">Jazz</a>
+                <a href="{% url 'reggae' %}">Reggae</a>
                 
             </p>
             <p class="card-text">Last updated {{ my_object.last_updated|timesince }} ago</p>

@@ -28,3 +28,30 @@ class SongApiView(APIView):
 
 def songs(request):
     return render(request, 'products/music.html')
+
+def country(request):
+    return render(request, 'products/songs/country.html')
+
+def gospel(request):
+    return render(request, 'products/songs/gospel.html')
+
+def hiphop(request):
+    return render(request, 'products/songs/hip_hop.html')
+
+def jazz(request):
+    return render(request, 'products/songs/jazz.html')
+
+def pop(request):
+    return render(request, 'products/songs/pop.html')
+
+def rnb(request):
+    return render(request, 'products/songs/rnb.html')
+
+def rock(request):
+    return render(request, 'products/songs/rock.html')
+
+def reggae(request):
+    return render(request, "products/songs/reggae.html")
+
+def electronic(request):
+    return render(request, "products/songs/electronic.html")

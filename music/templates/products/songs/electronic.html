@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Music Loading...</h1>
+    <strong>
+        <h1>Electronic Music Loading...</h1>
+    </strong>
     <nav>
         <li><a href="{% url 'rock' %}">Rock</a></li>
         <li><a href="{% url 'pop' %}">Pop</a></li>
@@ -11,4 +13,5 @@
         <li><a href="{% url 'gospel' %}">Gospel</a></li>
         <li><a href="{% url 'reggae' %}">Reggae</a></li>
     </nav>
+
 {% endblock %}
