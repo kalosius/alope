@@ -19,7 +19,7 @@ class MovieApiView(APIView):
         if (serializer_obj.is_valid()):
 
             Movie.objects.create(id=serializer_obj.data.get("id"), 
-                            title=serializer_obj.data.get("title"), 
+                            movie_name=serializer_obj.data.get("movie_name"), 
                             description=serializer_obj.data.get("description"),)
 
         movie = Movie.objects.all().filter(id=request.data["id"]).values()
