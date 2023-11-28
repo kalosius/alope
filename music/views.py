@@ -3,7 +3,30 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from . models import *
 from . serializers import *
+
+# dealing with the search form for music
+from django.db.models import Q
+from . forms import MusicSearchForm
 # Create your views here.
+
+# This is for the music search query
+def music_list(request):
+    queryset = Music.objects.all()
+    search_form = MusicSearchForm(request.GET)
+
+    if search_form.is_valid():
+        search_query = search_form.cleaned_data.get('search_query')
+        if search_query:
+            queryset = queryset.filter(Q(title__icontains=search_query) | Q(artist__icontains=search_query))
+
+    context = {
+        'object_list': queryset,
+        'search_form':search_form
+    }
+
+    return render(request, 'products/music.html', context)
+
+
 
 class SongApiView(APIView):
     serializer_class = PopSerializer
@@ -55,3 +78,5 @@ def reggae(request):
 
 def electronic(request):
     return render(request, "products/songs/electronic.html")
+
+

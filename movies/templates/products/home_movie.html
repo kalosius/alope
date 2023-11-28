@@ -1,4 +1,48 @@
 {% extends 'base.html' %}
 {% block content %}
     <h1>Movies Loading...</h1>
+    <h1>Movie Information</h1>
+    
+    <!-- Container to display movie information -->
+    <div id="movie-info"></div>
+
+    <script>
+        // Replace 'YOUR_API_KEY' with the actual API key obtained from the provider
+        const apiKey = 'cb31935fc07792f615d11de334081eb4';
+
+        // Replace 'API_ENDPOINT' with the actual API endpoint URL for the specific platform
+        const apiEndpoint = 'https://api.themoviedb.org/3/movie/550?api_key=cb31935fc07792f615d11de334081eb4';
+
+        // Function to make an API request and display the data
+        async function getMovieInfo(movieTitle) {
+            try {
+                const response = await fetch(`${apiEndpoint}?api_key=${apiKey}&query=${movieTitle}`);
+                const data = await response.json();
+
+                // Assuming the API response has a 'results' property containing an array of movies
+                const movies = data.results;
+
+                // Display movie information
+                const movieInfoContainer = document.getElementById('movie-info');
+                movieInfoContainer.innerHTML = ''; // Clear previous content
+
+                if (movies.length > 0) {
+                    movies.forEach(movie => {
+                        // Customize how you want to display the movie information
+                        const movieDiv = document.createElement('div');
+                        movieDiv.innerHTML = `<h2>${movie.title}</h2><p>${movie.overview}</p>`;
+                        movieInfoContainer.appendChild(movieDiv);
+                    });
+                } else {
+                    movieInfoContainer.innerHTML = '<p>No movies found.</p>';
+                }
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+
+        // Example usage
+        const movieTitle = 'Inception';
+        getMovieInfo(movieTitle);
+    </script>
 {% endblock %}

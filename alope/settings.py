@@ -33,7 +33,7 @@ INSTALLED_APPS = [
     'news',
     'weather',
     'rest_framework',
-
+    'django_filters',
 ]
 
 MIDDLEWARE = [

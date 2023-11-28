@@ -3,7 +3,42 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from . models import *
 from . serializers import *
+import requests
 # Create your views here.
+
+# This is the API for all the movies
+import requests
+
+def get_movie_info(movie_title):
+    api_key = 'cb31935fc07792f615d11de334081eb4'
+    api_endpoint = 'https://api.themoviedb.org/3/movie/550?api_key=cb31935fc07792f615d11de334081eb4'
+    params = {
+        'api_key': api_key,
+        'title': movie_title,
+    }
+
+    try:
+        # Make the API request
+        response = requests.get(api_endpoint, params=params)
+
+        # Check if the request was successful (status code 200)
+        if response.status_code == 200:
+            # Parse and return the response data (consider using JSON parsing for APIs that return JSON)
+            return response.json()
+        else:
+            # Print an error message if the request was not successful
+            print(f"Error: {response.status_code}")
+    except Exception as e:
+        print(f"An error occurred: {str(e)}")
+
+# Example usage
+movie_title = 'Inception'
+result = get_movie_info(movie_title)
+print(result)
+
+
+
+
 
 class MovieApiView(APIView):
     serializer_class = MovieSerializer

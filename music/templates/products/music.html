@@ -1,6 +1,26 @@
 {% extends 'base.html' %}
 {% block content %}
     <h1>Music Loading...</h1>
+
+    <form method="get" action="">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <input type="text">
+            <label for="id_search_query">Search:</label>
+            {{ search_form.search_query }}
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+    
+    {% for item in object_list %}
+    <!-- Displaying model items here -->
+        {{ item.title }}
+        {{  item.artist }}
+
+    {% endfor %}
+    
     <nav>
         <li><a href="{% url 'rock' %}">Rock</a></li>
         <li><a href="{% url 'pop' %}">Pop</a></li>
