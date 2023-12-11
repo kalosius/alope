@@ -31,12 +31,18 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{% url 'alope_home' %}">Home</a>
               </li>
+                <!-- Display authenticated user content -->
+             
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'songs' %}">Music</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'home_movie' %}">Movies</a>
               </li>
+              
+              <!-- Display content for unauthenticated users -->
+              {% if user.is_authenticated %}
+                
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'sports' %}">Sports</a>
               </li>
@@ -54,10 +60,16 @@
                   <li><a class="dropdown-item" href="#">Contact</a></li>
                 </ul>
               </li>
+              
               <li class="nav-item">
                 <a class="nav-link disabled" aria-disabled="true">Disabled</a>
               </li>
+              {% endif %}
             </ul>
+            <strong>
+              <p>Hello, {{ user.username }}!</p>
+            </strong>
+          </div>
           </div>
         </div>
       </nav><br/>
