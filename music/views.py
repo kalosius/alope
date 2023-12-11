@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from . models import *
 from . serializers import *
 
+
 # dealing with the search form for music
 from django.db.models import Q
 from . forms import MusicSearchForm
@@ -11,6 +12,7 @@ from . forms import MusicSearchForm
 
 # This is for the music search query
 def music_list(request):
+    
     queryset = Music.objects.all()
     search_form = MusicSearchForm(request.GET)
 
@@ -24,7 +26,7 @@ def music_list(request):
         'search_form':search_form
     }
 
-    return render(request, 'products/music.html', context)
+    return render(request, 'products/music.html', context, )
 
 
 
